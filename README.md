@@ -92,12 +92,13 @@ F H <BR>
 <h3>Program:</h3>
 
 
-```
+```python
+#program developed by BARATHRAJ K
 from collections import defaultdict
 def dfs(graph, start, visited, path):
     path.append(start)
     visited[start] = True
-    for neighbour in sorted(graph[start]):   # sort to ensure consistent DFS order
+    for neighbour in sorted(graph[start]):   
         if not visited[neighbour]:
             dfs(graph, neighbour, visited, path)
     return path
